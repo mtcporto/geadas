@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Geadas</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-		crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-		crossorigin=""></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.5/wicket.js" crossorigin=""></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.5/wicket-leaflet.js" crossorigin=""></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Adiciona leaflet (CSS/JS) (via CDN) -->
+ 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+<!-- Adiciona wicket (via CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.5/wicket.js" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.5/wicket-leaflet.js" crossorigin=""></script>
+
+<!-- Adiciona jquery (via CDN) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+
+<!-- Adiciona leaflet.awesome-markers (via CDN) / Nao usado nesse projeto atualmente -->
+<!--	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet.awesome-markers@2.0.4/dist/leaflet.awesome-markers.css" />
+	<script src="https://unpkg.com/leaflet.awesome-markers@2.0.4/dist/leaflet.awesome-markers.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet" crossorigin="">
+
+ Adiciona leaflet-extra-markers (via CDN) / Nao usado nesse projeto atualmente -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.1.0/dist/css/leaflet.extra-markers.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.1.0/dist/js/leaflet.extra-markers.min.js"></script>
+
+
 </head>
-
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-6" id="map" style="position: absolute;">
-				<script src="index.js"> </script>
-			</div>
-			<div class="col-sm-6">
-				<h1>Mapa geadas</h1>
-				<ul>
-					<h3>Feito:</h3>
-					<li>Consultando da API</li>
-					<li>Plotando os icones</li>
-					<li>BindPopup</li>
-					<li>Tooltip</li>
-					<li>Legenda</li>
-					<li>Intensidade (Popup)</li>
-					<h3>Falta:</h3>
-					<li>Intensidade (cores dos icones)</li>
-					<li>Varias ocorrencias por cidade</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</body>
+<div id="map"></div>
 
+
+
+
+<!-- Comentarios e roadmap -->
+<h1>Mapa geadas</h1>
+<ul>
+<h3>Feito:</h3>
+	<li>Plotando os icones</li>
+	<li>BindPopup</li>
+	<li>Tooltip</li>
+	<li>Legenda</li>
+	<li>Consultando da API</li>	
+	<li>Intensidade (Popup)</li>
+
+
+<h3>Falta:</h3>
+	<li>Intensidade (cores dos icones) de acordo com os retornos de calculaIntensidade</li>
+	<li>Varias ocorrencias por cidade</li>
+	<li>Filtros</li>
+
+</ul>
+</body>
 </html>
