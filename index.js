@@ -21,7 +21,7 @@ import './index.html';
 	var legend = L.control({position: 'bottomright'});
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
-			labels = ['<strong>Intensidade da Geada</strong><br>','<img src="https://web2py.educatux.com.br/geada/static/_2.18.5/vm.png" width="15%" style="vertical-align:middle"> Forte', '<img src="https://web2py.educatux.com.br/geada/static/_2.18.5/am.png" width="15%" style="vertical-align:middle"> Moderada', '<img src="https://web2py.educatux.com.br/geada/static/_2.18.5/az.png" width="15%" style="vertical-align:middle"> Fraca'],
+			labels = ['<strong>Intensidade da Geada</strong><br>','<img src="vm.png" width="15%" style="vertical-align:middle"> Forte', '<img src="am.png" width="15%" style="vertical-align:middle"> Moderada', '<img src="az.png" width="15%" style="vertical-align:middle"> Fraca'],
 			from, to;
 		div.innerHTML = labels.join('<br>');
 		return div;
@@ -67,17 +67,17 @@ import './index.html';
 
 //icones por Intensidade
 	var Forte = L.icon({
-    iconUrl: "https://web2py.educatux.com.br/geada/static/_2.18.5/vm.png",
+    iconUrl: "vm.png",
     iconAnchor: [15, 32],
     popupAnchor: [0, -30],
 	});
 	var Moderada = L.icon({
-    iconUrl: 'https://web2py.educatux.com.br/geada/static/_2.18.5/am.png',
+    iconUrl: 'am.png',
     iconAnchor: [15, 32],
     popupAnchor: [0, -30],
 	});
 	var Fraca = L.icon({
-    iconUrl: 'https://web2py.educatux.com.br/geada/static/_2.18.5/az.png',
+    iconUrl: 'az.png',
     iconAnchor: [15, 32],
     popupAnchor: [0, -30],
 	});
